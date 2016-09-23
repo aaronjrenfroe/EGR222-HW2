@@ -1,7 +1,7 @@
 /*
-//Program Draws Rows and Grids of Boxes to create a Cafe Illusion
-//Created by Aaron Renfroe Fall 2016
-//MORTAR must be set to 1 or 2 or the Illusion breaks down
+Program Draws Rows and Grids of Boxes to create a Cafe Illusion
+Created by Aaron Renfroe Fall 2016
+MORTAR must be set to 1 or 2 or the Illusion breaks down
 */
 
 import java.awt.*;
@@ -52,6 +52,7 @@ public class DrawLine1 {
         }
 
     }
+
     //draws a row of boxes with specified parameters by drawing a pair at a time.
     public static void drawRow( int x, int y,int numberOfPairs, int size){
 
@@ -65,7 +66,8 @@ public class DrawLine1 {
             g.setColor(Color.BLUE);
             g.drawLine(x, y, x+ size, y + size);
             g.drawLine(x+size, y, x, y+size);
-            x += 2*size;                            //shifts starting point to the right for the next pait of boxes to be put down
+            x += 2*size; //shifts starting point to the right for the next pait of boxes to be put down
+
         }
 
     }
