@@ -7,7 +7,6 @@ MORTAR must be set to 1 or 2 or the Illusion breaks down
 import java.awt.*;
 public class DrawLine1 {
 
-
     static final DrawingPanel panel = new DrawingPanel(650,400);
     static final Color backgroundColor = Color.GRAY;
     static final Graphics g = panel.getGraphics();
@@ -17,21 +16,22 @@ public class DrawLine1 {
     public static void main(String[] args) {
 
         panel.setBackground(backgroundColor);
+        drawTheRows();
+        drawTheGrids();
 
-        //drawRow(x pos, y pos, # of pairs, box size)
+    }
 
-        drawRow(0,0,4,20);
-        drawRow(50,70,5,30);
-
-        //drawGrid(size,width,height, X starting position, Y starting position, offSet))
-
+    public static void drawTheRows(){
+        //drawRow(x, y, pairs, box size)
+        drawRow(0, 0, 4, 20);
+        drawRow(50, 70,5, 30);
+    }
+    public static void drawTheGrids(){
+        //drawGrid(size,width, height, x, y, offSet))
         drawGrid(10,150,4,25,0);
         drawGrid(250,200,3,25,10);
         drawGrid(425,180,5,20,10);
         drawGrid(400,20,2,35,35);
-
-
-
     }
 
     // Draws a grid of boxes by calling drawRow() with in a loop
@@ -66,7 +66,7 @@ public class DrawLine1 {
             g.setColor(Color.BLUE);
             g.drawLine(x, y, x+ size, y + size);
             g.drawLine(x+size, y, x, y+size);
-            x += 2*size; //shifts starting point to the right for the next pait of boxes to be put down
+            x += 2*size; //shifts starting point to the right for the next pair of boxes to be put down
 
         }
 
