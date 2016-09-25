@@ -5,7 +5,7 @@ MORTAR must be set to 1 or 2 or the Illusion breaks down
 */
 
 import java.awt.*;
-public class DrawLine1 {
+public class CafeWall {
 
     static final DrawingPanel panel = new DrawingPanel(650,400);
     static final Color backgroundColor = Color.GRAY;
