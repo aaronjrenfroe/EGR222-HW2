@@ -40,13 +40,9 @@ public class CafeWall {
 
         startY = startY - boxSize - MORTAR;
 
-
         for (int i = 0; i < pairs*2; i++) {
 
-
-
             startY = startY +(boxSize) + (MORTAR);
-
 
             drawRow(startX +((i%2)*offset), startY,pairs, boxSize);
         }
